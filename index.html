@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+	    $('#touch-menu').on('click', function(e) {
+
+    		if($(".burger").is(':hidden')){
+        	$(".burger").slideDown('400');
+    		} else {
+    			$(".burger").slideUp('400');
+    		}
+
+	    });
+
+	    $('a[href^="#"]').click(function () {
+			  elementClick = $(this).attr("href");
+				destination = $(elementClick).offset().top;
+
+				if($.browser.safari){
+					$('body').animate( { scrollTop: destination }, 1000 );
+				} else {
+			    $('html').animate( { scrollTop: destination }, 1000 );
+				}
+
+				return false;
+
+		   });
+
+		});
+	</script>
+
+</head>
+
+<body>
+	
+	<!-- begin wrapper -->
+	<div class="wrapper">
+
+		<!-- begin header -->
+		<header class="header">
+			<div class="container">
+				<a href="#" class="header__account">
+					<img src="https://zeef.io/image/32552/300/s?1496066964159" alt="logo">
+					<span>NORTHLANDSCAPES</span>
+				</a>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#main-page">Start</a></li>
+						<li class="menu__item"><a href="#about">About</a></li>
+						<li class="menu__item"><a href="#question">Questions</a></li>
+					</ul>
+				</nav>
+				<form class="search">
+					<input placeholder="Search..." type="text">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</form>
+
+				<!-- begin burger menu -->
+				<div class="burger">
+					<ul class="burger__list">
+						<li class="burger__item"><a href="#main-page">Start</a></li>
+						<li class="burger__item"><a href="#about">About</a></li>
+						<li class="burger__item"><a href="#question">Questions</a></li>
+					</ul>
+					<form class="b-search">
+						<input placeholder="Search..." type="text">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</form>
+				</div>
+				<i id="touch-menu" class="fa fa-bars" aria-hidden="true"></i>
+				<!-- end burger menu -->
+
+			</div>
+		</header> <!-- end header -->
+
+		<!-- begin sidebar -->
+		<aside class="sidebar">
+			<a href="#" class="sidebar__login">
+				<img src="https://skupkazolota.pro/wp-content/uploads/2016/03/20151012_561baed03a54e-160x160.png" alt="user">
+				<p><span>Welcome, </span>John</p>
+			</a>
+			<ul class="sidebar__list">
+				<li class="sidebar__item active">
+					<a href="#">
+					<i class="fa fa-home" aria-hidden="true"></i>
+					<span>Main</span></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="#">
+					<i class="fa fa-picture-o" aria-hidden="true"></i>
+					<span>Portfolio</span></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="#">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<span>Calendar</span></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="#">
+					<i class="fa fa-money" aria-hidden="true"></i>
+					<span>Price</span></a>
+				</li>
+				<li class="sidebar__item">
+					<a href="#">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<span>Contacts</span></a>
+				</li>
+			</ul>
+		</aside><!-- end sidebar -->
+
+		<!-- begin start -->
+		<main class="start" id="main-page">
+			<h1>NORTHLANDSCAPES</h1>
+			<h2>Photography by Erik Walder</h2>
+		</main><!-- end start -->
+
+		<!-- begin about -->
+		<section class="about" id="about">
+			<div class="content">
+				<img src="http://buckymaler.com/apollo/assets/img/camera.png" alt="camera">
+				<div class="article">
+					<h3>Who I am?</h3>
+					<p>My name is <span>Erik</span></p>
+					<p>I think everyone should get into photography. (Yes, everyone). You don’t ever have to do it professionally. That’s not what being a photographer means. Being a photographer just means you really love photography like me. Well, maybe you’re just curious about photography, but aren’t sure if you should really dive into it. Fair warning, these reasons will totally convince you that photography is an amazing skill to develop. I’m sure of it.</p>
+				</div>
+			</div>
+		</section><!-- end about -->
+
+		<!-- begin question -->
+		<div class="question" id="question">
+			<h2>Any questions</h2>
+			<form class="form">
+				<div>
+					<input type="text" placeholder="Name">
+					<input type="email" placeholder="Mail">
+				</div>
+				<textarea placeholder="Message"></textarea>
+				<button type="submit">SEND</button>
+			</form>
+		</div><!-- end question -->
+
+		<!-- begin footer -->
+		<footer class="footer">
+			&copy; No rights reserved :(
+		</footer><!-- end footer -->
+
+	</div><!-- end wrapper -->
+		
+</body>
+</html>
